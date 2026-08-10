@@ -107,6 +107,12 @@
 </div>
 </div>
 
+
+<!-- Letakkan butang ini di tempat yang sesuai dalam HTML anda, contohnya bawah borang log masuk -->
+<button id="btnPasang" style="display:none; background-color: #1a5276; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; margin-top: 15px;">
+  Pasang Aplikasi Permai Court 1
+</button>
+        
 <script>
   // Pilih butang menggunakan ID
   const butang1 = document.getElementById('butangTabBaharu');
@@ -116,7 +122,38 @@
   butang1.addEventListener('click', function() {
     window.location.href = '1.html';
   });  
+        
+  let deferredPrompt;
+  const btnPasang = document.getElementById('btnPasang');
 
+  // 1. Daftar Service Worker dengan laluan repo yang betul
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/permaicourt1/sw.js')
+        .then(reg => console.log('Service Worker aktif'))
+        .catch(err => console.log('Gagal:', err));
+    });
+  }
+
+  // 2. Tangkap event sedia untuk dipasang dari pelayar
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); // Halang prompt automatik biasa
+    deferredPrompt = e;  // Simpan event untuk digunakan nanti
+    btnPasang.style.display = 'block'; // Paparkan butang pasang manual anda
+
+    btnPasang.addEventListener('click', () => {
+      btnPasang.style.display = 'none'; // Sorokkan butang selepas ditekan
+      deferredPrompt.prompt(); // Paparkan prompt pasang rasmi pelayar
+      
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Pengguna bersetuju memasang PWA');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+        
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/permaicourt1/service-worker.js')
