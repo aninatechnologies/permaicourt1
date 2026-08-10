@@ -2,7 +2,7 @@
   "name": "Permai Court 1 Resident App",
   "short_name": "Permai Court 1",
   "description": "Aplikasi rasmi komuniti dan penduduk Permai Court 1.",
-  "start_url": "./index.html",
+  "start_url": "/permaicourt1/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1a5276",
