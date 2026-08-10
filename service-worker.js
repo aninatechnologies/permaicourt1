@@ -3,6 +3,10 @@ const CACHE_NAME = 'permai-court-cache-v2';
 const APP_SHELL = [
     '/permaicourt1/',
     '/permaicourt1/index.html',
+
+    // HALAMAN UTAMA PWA
+    '/permaicourt1/main.html',
+
     '/permaicourt1/manifest.json',
 
     '/permaicourt1/icon-192.png',
