@@ -3,7 +3,7 @@
     "short_name": "Permai Court 1",
     "description": "Aplikasi rasmi komuniti dan penduduk Permai Court 1.",
 
-    "start_url": "/permaicourt1/index.html",
+    "start_url": "/permaicourt1/main.html",
 
     "scope": "/permaicourt1/",
 
