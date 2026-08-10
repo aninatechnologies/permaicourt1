@@ -1,4 +1,4 @@
-const CACHE_NAME = 'permai-court-cache-v2';
+const CACHE_NAME = 'permai-court-cache-v3';
 
 const APP_SHELL = [
     '/permaicourt1/',
