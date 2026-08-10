@@ -30,7 +30,7 @@
         }
     </script>
 <title>Login - Permai Court 1</title>
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="/permaicourt1/manifest.json">
 <style type="text/tailwindcss">
         body {
             min-height: 100dvh;
@@ -116,6 +116,15 @@
   butang1.addEventListener('click', function() {
     window.location.href = '1.html';
   });  
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/permaicourt1/service-worker.js')
+        .then(reg => console.log('Service Worker terdaftar di skop:', reg.scope))
+        .catch(err => console.log('Pendaftaran Service Worker gagal:', err));
+    });
+  }        
+        
 </script>
 
 </body>
