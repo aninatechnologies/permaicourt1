@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
     <title>Login - Permai Court 1</title>
 
-    <!-- Bootstrap 5.3 -->
+    <!-- =====================================================
+         BOOTSTRAP 5.3
+    ====================================================== -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap Icons -->
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Google Font: Inter -->
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Material Symbols -->
+    <!-- =====================================================
+         MATERIAL SYMBOLS
+    ====================================================== -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/permaicourt1/manifest.json">
+    <!-- =====================================================
+         PWA MANIFEST
+    ====================================================== -->
+    <link
+        rel="manifest"
+        href="/permaicourt1/manifest.json"
+    >
+
+    <!-- =====================================================
+         IOS PWA
+    ====================================================== -->
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="Permai Court 1"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/permaicourt1/icon-192.png"
+    >
+
+    <meta
+        name="theme-color"
+        content="#137fec"
+    >
+
 
     <style>
+
         :root {
             --primary: #137fec;
             --background-light: #ffffff;
@@ -50,7 +101,11 @@
             color: #0f172a;
         }
 
-        /* Material Symbols */
+
+        /* =====================================================
+           MATERIAL SYMBOLS
+        ====================================================== */
+
         .material-symbols-outlined {
             font-family: "Material Symbols Outlined";
             font-weight: normal;
@@ -68,7 +123,11 @@
             font-feature-settings: "liga";
         }
 
-        /* Main Mobile Container */
+
+        /* =====================================================
+           MAIN MOBILE CONTAINER
+        ====================================================== */
+
         .login-container {
             position: relative;
             width: 100%;
@@ -77,13 +136,19 @@
             margin: 0 auto;
             background-color: #ffffff;
             overflow-x: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
             display: flex;
             flex-direction: column;
         }
 
-        /* Header */
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
         .login-header {
             display: flex;
             flex-direction: column;
@@ -93,6 +158,7 @@
             padding: 64px 32px 40px;
         }
 
+
         .logo-wrapper {
             display: flex;
             align-items: center;
@@ -100,12 +166,14 @@
             margin-bottom: 32px;
         }
 
+
         .logo-wrapper img {
             width: 100%;
             max-width: 180px;
             height: auto;
             display: block;
         }
+
 
         .property-title {
             font-size: 24px;
@@ -115,6 +183,7 @@
             margin: 0 0 4px;
         }
 
+
         .property-location {
             color: #64748b;
             font-size: 16px;
@@ -122,15 +191,21 @@
             margin: 0;
         }
 
-        /* Main Content */
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
         .login-content {
             flex: 1;
             padding: 0 32px;
         }
 
+
         .login-heading {
             margin-bottom: 32px;
         }
+
 
         .login-heading h2 {
             font-size: 20px;
@@ -141,6 +216,7 @@
             margin-bottom: 8px;
         }
 
+
         .login-heading p {
             font-size: 14px;
             color: #64748b;
@@ -148,10 +224,15 @@
             margin: 0;
         }
 
-        /* Form */
+
+        /* =====================================================
+           FORM
+        ====================================================== */
+
         .form-group-custom {
             margin-bottom: 20px;
         }
+
 
         .form-label-custom {
             display: block;
@@ -166,10 +247,15 @@
             color: #64748b;
         }
 
-        /* Input Wrapper */
+
+        /* =====================================================
+           INPUT
+        ====================================================== */
+
         .input-wrapper {
             position: relative;
         }
+
 
         .input-icon {
             position: absolute;
@@ -184,15 +270,15 @@
             transition: color 0.2s ease;
         }
 
+
         .input-wrapper:focus-within .input-icon {
             color: var(--primary);
         }
 
-        /* Input */
+
         .custom-input {
             width: 100%;
             min-height: 58px;
-
             padding: 16px 16px 16px 44px;
 
             background-color: #f8fafc;
@@ -215,10 +301,12 @@
                 background-color 0.2s ease;
         }
 
+
         .custom-input::placeholder {
             color: #94a3b8;
             opacity: 1;
         }
+
 
         .custom-input:focus {
             background-color: #ffffff;
@@ -229,10 +317,15 @@
                 0 0 0 2px var(--primary);
         }
 
-        /* Password Input */
+
+        /* =====================================================
+           PASSWORD
+        ====================================================== */
+
         .password-input {
             padding-right: 52px;
         }
+
 
         .password-toggle {
             position: absolute;
@@ -256,17 +349,23 @@
             transition: color 0.2s ease;
         }
 
+
         .password-toggle:hover {
             color: #475569;
         }
 
-        /* Forgot Password */
+
+        /* =====================================================
+           FORGOT PASSWORD
+        ====================================================== */
+
         .forgot-password-wrapper {
             display: flex;
             justify-content: flex-end;
             margin-top: -4px;
             margin-bottom: 0;
         }
+
 
         .forgot-password {
             color: var(--primary);
@@ -275,11 +374,16 @@
             text-decoration: none;
         }
 
+
         .forgot-password:hover {
             text-decoration: underline;
         }
 
-        /* Login Button */
+
+        /* =====================================================
+           LOGIN BUTTON
+        ====================================================== */
+
         .btn-login {
             width: 100%;
             min-height: 58px;
@@ -310,28 +414,87 @@
                 box-shadow 0.2s ease;
         }
 
+
         .btn-login:hover {
             background-color: #0d6fd1;
             color: #ffffff;
+
             box-shadow:
                 0 12px 24px rgba(19, 127, 236, 0.25);
         }
+
 
         .btn-login:active {
             transform: scale(0.98);
         }
 
+
         .btn-login .material-symbols-outlined {
             font-size: 22px;
         }
 
-        /* Register Area */
+
+        /* =====================================================
+           PWA INSTALL BUTTON
+        ====================================================== */
+
+        .pwa-install-area {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+
+        #btnPasang {
+            display: none !important;
+
+            width: 100%;
+            min-height: 52px;
+
+            border: 0;
+            border-radius: 12px;
+
+            background-color: #f1f5f9;
+            color: #334155;
+
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.1s ease;
+        }
+
+
+        #btnPasang:hover {
+            background-color: #e2e8f0;
+        }
+
+
+        #btnPasang:active {
+            transform: scale(0.98);
+        }
+
+
+        #btnPasang .bi {
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           REGISTER AREA
+        ====================================================== */
+
         .register-area {
             margin-top: 48px;
             margin-bottom: 32px;
-
             text-align: center;
         }
+
 
         .register-area p {
             color: #64748b;
@@ -339,13 +502,17 @@
             margin: 0;
         }
 
-        /* Footer */
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
         .login-footer {
             margin-top: auto;
             padding: 0 32px 40px;
-
             text-align: center;
         }
+
 
         .support-pill {
             display: inline-flex;
@@ -359,10 +526,12 @@
             border-radius: 999px;
         }
 
+
         .support-pill .material-symbols-outlined {
             font-size: 16px;
             color: #64748b;
         }
+
 
         .support-pill a {
             color: #64748b;
@@ -371,13 +540,59 @@
             text-decoration: none;
         }
 
+
         .support-pill a:hover {
             text-decoration: underline;
         }
 
-        /* ==========================================
+
+        /* =====================================================
+           IOS INSTALL MODAL
+        ====================================================== */
+
+        .ios-share-icon {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+
+        .ios-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+
+        .ios-step-number {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+            color: #ffffff;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        .ios-step-text {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
            DARK MODE
-        ========================================== */
+        ====================================================== */
 
         @media (prefers-color-scheme: dark) {
 
@@ -386,29 +601,36 @@
                 color: #f1f5f9;
             }
 
+
             .login-container {
                 background-color: #0f172a;
             }
+
 
             .property-title {
                 color: #ffffff;
             }
 
+
             .property-location {
                 color: #94a3b8;
             }
+
 
             .login-heading h2 {
                 color: #f1f5f9;
             }
 
+
             .login-heading p {
                 color: #94a3b8;
             }
 
+
             .form-label-custom {
                 color: #94a3b8;
             }
+
 
             .custom-input {
                 background-color: #1e293b;
@@ -419,69 +641,111 @@
                     inset 0 0 0 1px #334155;
             }
 
+
             .custom-input::placeholder {
                 color: #64748b;
             }
+
 
             .custom-input:focus {
                 background-color: #1e293b;
             }
 
+
             .password-toggle:hover {
                 color: #cbd5e1;
             }
+
 
             .register-area p {
                 color: #94a3b8;
             }
 
+
             .support-pill {
                 background-color: #1e293b;
             }
+
 
             .support-pill .material-symbols-outlined,
             .support-pill a {
                 color: #94a3b8;
             }
+
+
+            #btnPasang {
+                background-color: #1e293b;
+                color: #e2e8f0;
+            }
+
+
+            #btnPasang:hover {
+                background-color: #334155;
+            }
+
+
+            .ios-step-text {
+                color: #cbd5e1;
+            }
+
         }
 
-        /* Desktop */
+
+        /* =====================================================
+           DESKTOP
+        ====================================================== */
+
         @media (min-width: 576px) {
+
             body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
                 min-height: 100vh;
+
                 padding: 20px 0;
             }
+
 
             .login-container {
                 min-height: calc(100vh - 40px);
                 border-radius: 16px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
 <div class="login-container">
 
-    <!-- ==========================================
+
+    <!-- =====================================================
          HEADER
-    =========================================== -->
+    ====================================================== -->
+
     <header class="login-header">
 
         <div class="logo-wrapper">
+
             <img
                 src="img/jmb1.png"
                 alt="Logo Permai Court 1"
             >
+
         </div>
+
 
         <h1 class="property-title">
             Permai Court 1
         </h1>
+
 
         <p class="property-location">
             Ampang Jaya, Selangor
@@ -490,16 +754,20 @@
     </header>
 
 
-    <!-- ==========================================
+
+    <!-- =====================================================
          MAIN CONTENT
-    =========================================== -->
+    ====================================================== -->
+
     <main class="login-content">
+
 
         <div class="login-heading">
 
             <h2>
                 Log Masuk Penghuni
             </h2>
+
 
             <p>
                 Sila masukkan butiran anda untuk bermula
@@ -508,10 +776,16 @@
         </div>
 
 
-        <!-- LOGIN FORM -->
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
         <form id="loginForm">
 
+
             <!-- NO HP / EMEL -->
+
             <div class="form-group-custom">
 
                 <label
@@ -521,11 +795,13 @@
                     No. HP / Emel
                 </label>
 
+
                 <div class="input-wrapper">
 
                     <span class="material-symbols-outlined input-icon">
                         call
                     </span>
+
 
                     <input
                         id="loginInput"
@@ -540,7 +816,9 @@
             </div>
 
 
+
             <!-- KATA LALUAN -->
+
             <div class="form-group-custom">
 
                 <label
@@ -550,11 +828,13 @@
                     Kata Laluan
                 </label>
 
+
                 <div class="input-wrapper">
 
                     <span class="material-symbols-outlined input-icon">
                         lock
                     </span>
+
 
                     <input
                         id="passwordInput"
@@ -564,18 +844,21 @@
                         autocomplete="current-password"
                     >
 
+
                     <button
                         type="button"
                         id="togglePassword"
                         class="password-toggle"
                         aria-label="Tunjukkan kata laluan"
                     >
+
                         <span
                             id="passwordIcon"
                             class="material-symbols-outlined"
                         >
                             visibility
                         </span>
+
                     </button>
 
                 </div>
@@ -583,7 +866,9 @@
             </div>
 
 
+
             <!-- LUPA KATA LALUAN -->
+
             <div class="forgot-password-wrapper">
 
                 <a
@@ -596,15 +881,19 @@
             </div>
 
 
+
             <!-- BUTANG LOGIN -->
+
             <button
                 id="butangTabBaharu"
                 type="submit"
                 class="btn btn-login"
             >
+
                 <span>
                     Log Masuk
                 </span>
+
 
                 <span class="material-symbols-outlined">
                     arrow_forward
@@ -612,15 +901,42 @@
 
             </button>
 
+
         </form>
 
-<div id="btnPasang" class="mt-1">
-<i class="bi bi-phone-fill fs-3"></i>
-Pasang Aplikasi
-</div>
 
 
-        <!-- BELUM ADA AKAUN -->
+        <!-- =================================================
+             BUTANG INSTALL PWA
+        ================================================== -->
+
+        <div
+            id="pwaInstallArea"
+            class="pwa-install-area"
+        >
+
+            <button
+                id="btnPasang"
+                type="button"
+                aria-label="Pasang Aplikasi Permai Court 1"
+            >
+
+                <i class="bi bi-phone-fill"></i>
+
+                <span>
+                    Pasang Aplikasi
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BELUM ADA AKAUN
+        ================================================== -->
+
         <div class="register-area">
 
             <p>
@@ -629,12 +945,15 @@ Pasang Aplikasi
 
         </div>
 
+
     </main>
 
 
-    <!-- ==========================================
+
+    <!-- =====================================================
          FOOTER
-    =========================================== -->
+    ====================================================== -->
+
     <footer class="login-footer">
 
         <div class="support-pill">
@@ -642,6 +961,7 @@ Pasang Aplikasi
             <span class="material-symbols-outlined">
                 support_agent
             </span>
+
 
             <a href="1.html">
                 Hubungi Pengurusan
@@ -651,107 +971,545 @@ Pasang Aplikasi
 
     </footer>
 
+
 </div>
 
 
-<!-- Bootstrap JS -->
+
+<!-- =========================================================
+     IOS INSTALL MODAL
+========================================================== -->
+
+<div
+    class="modal fade"
+    id="iosInstallModal"
+    tabindex="-1"
+    aria-labelledby="iosInstallModalLabel"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content border-0 rounded-4 shadow">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title fw-bold"
+                    id="iosInstallModalLabel"
+                >
+                    Pasang Permai Court 1
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Tutup"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="text-center mb-4">
+
+                    <i class="bi bi-phone ios-share-icon"></i>
+
+                    <p class="mt-3 mb-0 text-secondary">
+                        Pasang aplikasi ini pada skrin utama iPhone atau iPad anda.
+                    </p>
+
+                </div>
+
+
+                <div class="ios-step">
+
+                    <div class="ios-step-number">
+                        1
+                    </div>
+
+                    <div class="ios-step-text">
+
+                        Tekan ikon
+                        <strong>Share</strong>
+                        <i class="bi bi-box-arrow-up"></i>
+                        pada Safari.
+
+                    </div>
+
+                </div>
+
+
+                <div class="ios-step">
+
+                    <div class="ios-step-number">
+                        2
+                    </div>
+
+                    <div class="ios-step-text">
+
+                        Tatal menu ke bawah dan pilih
+                        <strong>Add to Home Screen</strong>.
+
+                    </div>
+
+                </div>
+
+
+                <div class="ios-step">
+
+                    <div class="ios-step-number">
+                        3
+                    </div>
+
+                    <div class="ios-step-text">
+
+                        Tekan
+                        <strong>Add</strong>
+                        untuk memasang aplikasi.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-primary w-100 rounded-3"
+                    data-bs-dismiss="modal"
+                >
+                    Faham
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================== -->
+
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
 
+
 <script>
 
-    // ==========================================
-    // BUTANG LOGIN
-    // ==========================================
+    /* ========================================================
+       BUTANG LOGIN
+    ======================================================== */
 
-    const butang1 = document.getElementById('butangTabBaharu');
-
-    butang1.addEventListener('click', function (event) {
-
-        event.preventDefault();
-
-        window.location.href = '1.html';
-
-    });
+    const butang1 =
+        document.getElementById('butangTabBaharu');
 
 
-    // ==========================================
-    // TOGGLE PASSWORD
-    // ==========================================
+    if (butang1) {
+
+        butang1.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            window.location.href = '1.html';
+
+        });
+
+    }
+
+
+
+    /* ========================================================
+       TOGGLE PASSWORD
+    ======================================================== */
 
     const togglePassword =
         document.getElementById('togglePassword');
 
+
     const passwordInput =
         document.getElementById('passwordInput');
+
 
     const passwordIcon =
         document.getElementById('passwordIcon');
 
 
-    togglePassword.addEventListener('click', function () {
+    if (
+        togglePassword &&
+        passwordInput &&
+        passwordIcon
+    ) {
 
-        if (passwordInput.type === 'password') {
+        togglePassword.addEventListener(
+            'click',
+            function () {
 
-            passwordInput.type = 'text';
+                if (
+                    passwordInput.type === 'password'
+                ) {
 
-            passwordIcon.textContent = 'visibility_off';
+                    passwordInput.type = 'text';
 
-            togglePassword.setAttribute(
-                'aria-label',
-                'Sembunyikan kata laluan'
+                    passwordIcon.textContent =
+                        'visibility_off';
+
+                    togglePassword.setAttribute(
+                        'aria-label',
+                        'Sembunyikan kata laluan'
+                    );
+
+                } else {
+
+                    passwordInput.type = 'password';
+
+                    passwordIcon.textContent =
+                        'visibility';
+
+                    togglePassword.setAttribute(
+                        'aria-label',
+                        'Tunjukkan kata laluan'
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================================
+       PWA
+    ======================================================== */
+
+    let deferredPrompt = null;
+
+
+    const btnPasang =
+        document.getElementById('btnPasang');
+
+
+    const iosInstallModalElement =
+        document.getElementById('iosInstallModal');
+
+
+    let iosInstallModal = null;
+
+
+    if (
+        iosInstallModalElement &&
+        typeof bootstrap !== 'undefined'
+    ) {
+
+        iosInstallModal =
+            new bootstrap.Modal(
+                iosInstallModalElement
             );
 
-        } else {
+    }
 
-            passwordInput.type = 'password';
 
-            passwordIcon.textContent = 'visibility';
 
-            togglePassword.setAttribute(
-                'aria-label',
-                'Tunjukkan kata laluan'
+    /* ========================================================
+       DETECT iOS
+    ======================================================== */
+
+    function isIOS() {
+
+        return /iPad|iPhone|iPod/.test(
+            navigator.userAgent
+        ) ||
+        (
+            navigator.platform === 'MacIntel' &&
+            navigator.maxTouchPoints > 1
+        );
+
+    }
+
+
+
+    /* ========================================================
+       DETECT PWA STANDALONE
+    ======================================================== */
+
+    function isRunningAsPWA() {
+
+        return (
+            window.matchMedia(
+                '(display-mode: standalone)'
+            ).matches
+        )
+        ||
+        (
+            window.navigator.standalone === true
+        );
+
+    }
+
+
+
+    /* ========================================================
+       SHOW INSTALL BUTTON
+    ======================================================== */
+
+    function showInstallButton() {
+
+        if (!btnPasang) {
+            return;
+        }
+
+
+        btnPasang.style.setProperty(
+            'display',
+            'inline-flex',
+            'important'
+        );
+
+    }
+
+
+
+    /* ========================================================
+       HIDE INSTALL BUTTON
+    ======================================================== */
+
+    function hideInstallButton() {
+
+        if (!btnPasang) {
+            return;
+        }
+
+
+        btnPasang.style.setProperty(
+            'display',
+            'none',
+            'important'
+        );
+
+    }
+
+
+
+    /* ========================================================
+       SERVICE WORKER
+    ======================================================== */
+
+    if ('serviceWorker' in navigator) {
+
+        window.addEventListener(
+            'load',
+            async function () {
+
+                try {
+
+                    const registration =
+                        await navigator.serviceWorker.register(
+                            '/permaicourt1/service-worker.js',
+                            {
+                                scope: '/permaicourt1/'
+                            }
+                        );
+
+
+                    console.log(
+                        '✅ Service Worker aktif:',
+                        registration.scope
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        '❌ Service Worker gagal:',
+                        error
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================================
+       ANDROID / CHROME / EDGE INSTALL PROMPT
+    ======================================================== */
+
+    window.addEventListener(
+        'beforeinstallprompt',
+        function (event) {
+
+            console.log(
+                '✅ PWA sedia untuk dipasang'
             );
 
+
+            event.preventDefault();
+
+
+            deferredPrompt = event;
+
+
+            showInstallButton();
+
         }
+    );
 
-    });
-	
-	
-  let deferredPrompt;
-  const btnPasang = document.getElementById('btnPasang');
 
-  // 1. Daftar Service Worker dengan laluan repo yang betul
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/permaicourt1/service-worker.js')
-        .then(reg => console.log('Service Worker aktif'))
-        .catch(err => console.log('Gagal:', err));
-    });
-  }
 
-  // 2. Tangkap event sedia untuk dipasang dari pelayar
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); // Halang prompt automatik biasa
-    deferredPrompt = e;  // Simpan event untuk digunakan nanti
-    btnPasang.style.display = 'block'; // Paparkan butang pasang manual anda
+    /* ========================================================
+       INSTALL BUTTON CLICK
+    ======================================================== */
 
-    btnPasang.addEventListener('click', () => {
-      btnPasang.style.display = 'none'; // Sorokkan butang selepas ditekan
-      deferredPrompt.prompt(); // Paparkan prompt pasang rasmi pelayar
-      
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Pengguna bersetuju memasang PWA');
+    if (btnPasang) {
+
+        btnPasang.addEventListener(
+            'click',
+            async function () {
+
+
+                /* ---------------------------------------------
+                   iOS
+                --------------------------------------------- */
+
+                if (isIOS()) {
+
+                    if (
+                        !isRunningAsPWA() &&
+                        iosInstallModal
+                    ) {
+
+                        iosInstallModal.show();
+
+                    }
+
+                    return;
+
+                }
+
+
+
+                /* ---------------------------------------------
+                   ANDROID / DESKTOP
+                --------------------------------------------- */
+
+                if (!deferredPrompt) {
+
+                    console.log(
+                        '⚠️ Install prompt belum tersedia.'
+                    );
+
+                    return;
+
+                }
+
+
+                try {
+
+                    await deferredPrompt.prompt();
+
+
+                    const choiceResult =
+                        await deferredPrompt.userChoice;
+
+
+                    console.log(
+                        'Pilihan pengguna:',
+                        choiceResult.outcome
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        '❌ Ralat pemasangan PWA:',
+                        error
+                    );
+
+                }
+
+
+                deferredPrompt = null;
+
+
+                hideInstallButton();
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================================
+       iOS INSTALL BUTTON
+    ======================================================== */
+
+    if (
+        isIOS() &&
+        !isRunningAsPWA()
+    ) {
+
+        showInstallButton();
+
+    }
+
+
+
+    /* ========================================================
+       PWA SUDAH DIPASANG
+    ======================================================== */
+
+    window.addEventListener(
+        'appinstalled',
+        function () {
+
+            console.log(
+                '✅ PWA berjaya dipasang'
+            );
+
+
+            deferredPrompt = null;
+
+
+            hideInstallButton();
+
         }
-        deferredPrompt = null;
-      });
-    });
-  });
-               
+    );
+
+
+
+    /* ========================================================
+       JIKA SUDAH DALAM MODE PWA
+    ======================================================== */
+
+    if (isRunningAsPWA()) {
+
+        hideInstallButton();
+
+    }
+
 </script>
+
 
 </body>
 </html>
