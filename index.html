@@ -750,15 +750,7 @@ Pasang Aplikasi
       });
     });
   });
-        
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/permaicourt1/service-worker.js')
-        .then(reg => console.log('Service Worker terdaftar di skop:', reg.scope))
-        .catch(err => console.log('Pendaftaran Service Worker gagal:', err));
-    });
-  }        
-        
+               
 </script>
 
 </body>
