@@ -5,6 +5,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />        
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -93,49 +94,74 @@
 </button>
 </form>
 
-<!-- Ikon Terapung PWA -->
+<!-- Ikon Terapung PWA - Telefon Outline + Anak Panah Download -->
 
 <button id="btnPasang"
-style="
- display: none;
- position: fixed;
- bottom: 22px;
- right: 22px;
- z-index: 9999;
- background: transparent;
- color: #1a5276;
- width: 52px;
- height: 60px;
- padding: 0;
- border: none;
- border-radius: 0;
- box-shadow: none;
- align-items: center;
- justify-content: center;
- cursor: pointer;
- transition: transform 0.2s ease, filter 0.2s ease;
-"
-onmouseover="
- this.style.transform='scale(1.12)';
- this.style.filter='drop-shadow(0 4px 6px rgba(0,0,0,0.25))';
-"
-onmouseout="
- this.style.transform='scale(1)';
- this.style.filter='none';
-"
-title="Pasang Aplikasi">
+type="button"
+title="Pasang Aplikasi"
+aria-label="Pasang Aplikasi"
+class="hidden fixed bottom-5 right-5 z-[9999]
+      w-14 h-14
+      bg-transparent
+      border-0
+      p-0
+      text-[#1a5276]
+      flex items-center justify-center
+      cursor-pointer
+      transition-all duration-200
+      hover:scale-110
+      hover:text-[#154360]
+      hover:drop-shadow-[0_4px_5px_rgba(0,0,0,0.25)]">
 
-<span
- class="material-symbols-outlined"
- style="
-   font-size: 46px;
-   font-weight: 500;
-   line-height: 1;
- ">
-install_mobile </span>
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 48 48"
+ fill="none"
+ class="w-12 h-12"
+ aria-hidden="true">
+
+
+<!-- Telefon Outline -->
+<rect
+  x="11"
+  y="4"
+  width="26"
+  height="40"
+  rx="5"
+  stroke="currentColor"
+  stroke-width="2.5"/>
+
+<!-- Speaker -->
+<path
+  d="M19 9H29"
+  stroke="currentColor"
+  stroke-width="2.5"
+  stroke-linecap="round"/>
+
+<!-- Home Indicator -->
+<path
+  d="M20 39H28"
+  stroke="currentColor"
+  stroke-width="2.5"
+  stroke-linecap="round"/>
+
+<!-- Anak Panah Download -->
+<path
+  d="M24 15V28"
+  stroke="currentColor"
+  stroke-width="2.8"
+  stroke-linecap="round"/>
+
+<path
+  d="M18.5 23L24 28.5L29.5 23"
+  stroke="currentColor"
+  stroke-width="2.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"/>
+
+  </svg>
 
 </button>
-
 
         
 <div class="mt-12 mb-8 text-center">
