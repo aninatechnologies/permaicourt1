@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-[430px] mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-slate-900 p-4 sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800 justify-between">
+<div class="flex size-10 shrink-0 items-center overflow-hidden rounded-full border border-slate-100 dark:border-slate-800">
+<img class="h-full w-full object-cover" data-alt="Community logo for Permai Court 1" src="img/jmb1.webp"/>
+</div>
+<div class="flex-1 px-3">
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Permai Court 1</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Ampang Jaya, Selangor</p>
+</div>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+</div>
+</header>
+<!-- Welcome Section -->
+<section class="flex p-4 mt-2">
+<div class="flex w-full flex-col gap-4 items-start">
+<div class="flex gap-4 items-center">
+<div class="bg-primary/10 border-2 border-primary/20 rounded-full p-1">
+<img class="h-16 w-16 rounded-full object-cover" data-alt="Resident profile picture placeholder" src="img/27.jpg"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Welcome, Resident</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Block B, Level 04, No. 12</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Billing Summary Card -->
+<section class="px-4 py-2">
+<div class="flex flex-col overflow-hidden rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Outstanding Balance</p>
+<span class="px-2 py-0.5 bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400 text-[10px] font-bold rounded-full">DUE SOON</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-slate-900 dark:text-slate-100 text-2xl font-black">RM 150.00</span>
+<span class="text-slate-400 text-sm">for Jan 2024</span>
+</div>
+<div class="flex items-center gap-3 mt-1">
+<button id="butangTabBaharu" class="flex-1 flex items-center justify-center rounded-lg h-10 bg-primary text-white text-sm font-bold shadow-md shadow-primary/20">
+                            Pay Now
+                        </button>
+<button class="flex-none flex items-center justify-center rounded-lg h-10 w-10 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions Grid -->
+<section class="px-4 py-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Quick Actions</h3>
+<p class="text-primary text-sm font-semibold">View All</p>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<!-- Action 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
+<a href="2.html"><span class="material-symbols-outlined text-[28px]">payments</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="2.html">Bayar Bil</a></p>
+</div>
+<!-- Action 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400">
+<a href="3.html"><span class="material-symbols-outlined text-[28px]">report_problem</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="3.html">Aduan</a></p>
+</div>
+<!-- Action 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400">
+<a href="8.html"><span class="material-symbols-outlined text-[28px]">event_available</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="8.html">Program</a></p>
+</div>
+<!-- Action 4 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400">
+<a href="5.html"><span class="material-symbols-outlined text-[28px]">campaign</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="5.html">Pengumuman</a></p>
+</div>
+<!-- Action 5 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-cyan-50 dark:bg-cyan-900/20 text-cyan-600 dark:text-cyan-400">
+<a href="5.html"><span class="material-symbols-outlined text-[28px]">newspaper</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="5.html">Berita</a></p>
+</div>
+<!-- Action 6 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400">
+<a href="4.html"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="4.html">Sembang</a></p>
+</div>
+<!-- Action 7 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400">
+<a href="4.html"><span class="material-symbols-outlined text-[28px]">videocam</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="4.html">Video Meet</a></p>
+</div>
+<!-- Action 8 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-full aspect-square flex items-center justify-center rounded-2xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<a href="13.html"><span class="material-symbols-outlined text-[28px]">person</span></a>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-[11px] font-semibold text-center leading-tight"><a href="13.html">Profil</a></p>
+</div>
+</div>
+</section>
+<!-- Announcements / News Preview -->
+<section class="px-4 pb-24">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Latest Updates</h3>
+<div class="flex flex-col gap-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-3 shadow-sm border border-slate-100 dark:border-slate-800 flex gap-3">
+<div class="h-16 w-16 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0">
+<a href="3.html"><img class="h-full w-full object-cover rounded-lg" data-alt="Maintenance notice graphic" src="img/wtc.jpg"/></a>
+</div>
+<div class="flex flex-col justify-center overflow-hidden">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold truncate"><a href="3.html">Water Tank Cleaning - Block B</a></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Tomorrow, 10:00 AM - 4:00 PM</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl p-3 shadow-sm border border-slate-100 dark:border-slate-800 flex gap-3">
+<div class="h-16 w-16 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0">
+<a href="8.html"><img class="h-full w-full object-cover rounded-lg" data-alt="Community event poster" src="img/gr3.png"/></a>
+</div>
+<div class="flex flex-col justify-center overflow-hidden">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold truncate"><a href="8.html">Gotong Royong Perdana</a></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">This Sunday, 8:00 AM onwards</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navbar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] border-t border-slate-100 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pb-6 pt-2 z-20">
+<div class="flex justify-between items-center">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="1.html">
+<span class="material-symbols-outlined fill-1">home</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="3.html">
+<span class="material-symbols-outlined">grid_view</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Services</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="8.html">
+<span class="material-symbols-outlined">history</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Activity</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="13.html">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Account</p>
+</a>
+</div>
+</nav>
+</div>
+
+<script>
+  // Pilih butang menggunakan ID
+  const butang1 = document.getElementById('butangTabBaharu');
+
+  
+  // Tambah fungsi apabila butang diklik
+  butang1.addEventListener('click', function() {
+    window.location.href = '2.html';
+  });  
+</script>
+
+</body>
+</html>

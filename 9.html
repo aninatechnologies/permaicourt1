@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registration Success Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer" data-icon="arrow_back">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Status Pendaftaran</h2>
+</div>
+<!-- Success Animation/Icon Area -->
+<div class="flex flex-col px-6 py-8">
+<div class="flex flex-col items-center gap-6">
+<div class="flex items-center justify-center w-24 h-24 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-6xl">check_circle</span>
+</div>
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight text-center">Pendaftaran Berjaya!</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal text-center px-4">
+                        Anda telah berjaya mendaftar untuk aktiviti ini. Sila simpan kod QR di bawah untuk tujuan kehadiran semasa acara.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Event Summary Card -->
+<div class="px-4 @container">
+<div class="flex flex-col overflow-hidden rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-[16/7] bg-cover" data-alt="A group of people volunteering for community cleanup" style="background-image: url('img/gr2.png');">
+</div>
+<div class="flex w-full flex-col p-4 gap-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Gotong-royong Perdana Permai Court 1</h3>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">calendar_today</span>
+<p class="text-sm">30 Ogos 2026 (Ahad)</p>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<p class="text-sm">8:00 AM - 12:00 PM</p>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<p class="text-sm" data-location="Ampang, Malaysia">Kawasan Parkir Blok A, Permai Court 1</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- QR Code Section -->
+<div class="flex flex-col items-center py-8 px-4 gap-4">
+<div class="bg-white p-4 rounded-xl border-2 border-primary/30 shadow-md">
+<div class="bg-center bg-no-repeat w-48 h-48 bg-cover" data-alt="A digital QR code for event check-in" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5bmMKJlM4O37YGuDLwEVlWl2elNOSuuYXetxBsCFoSuC6jC-gnk27qIcQPulw_OzFHqoa6IlKTermQTWna2YGBEqHITyNS3V6ZYzei9-Khvw0PIa2LKkkvFwhWIPaLUaBZugiN-JgDkBjA08T6P4l8q8lUNfYe94AuRI8oGX-lp2PbfAj8lSOhYwxweIlYwSQ8AavhNaNnCFAfsm5J4Aaj9YbfyG7J8noDtzpMWPFrvl24_5r2glrFeY9Offhj7kYWoGUB2K_Xhc');">
+</div>
+</div>
+<div class="flex flex-col items-center">
+<h4 class="text-primary text-sm font-bold leading-normal tracking-wide uppercase">Imbas Semasa Acara</h4>
+<p class="text-slate-500 text-xs mt-1">ID: PC1-2024-12345</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-auto p-4 flex flex-col gap-3 pb-8">
+<button id="butangTabBaharu"class="flex items-center justify-center gap-2 rounded-xl h-14 px-5 bg-primary text-slate-900 text-base font-bold transition-all active:scale-95 w-full shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">home</span>
+<span class="truncate">Kembali ke Utama</span>
+
+
+</button>
+<button  class="flex items-center justify-center gap-2 rounded-xl h-14 px-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-base font-bold transition-all active:scale-95 w-full">
+<span class="material-symbols-outlined">calendar_add_on</span>
+<span class="truncate">Simpan ke Kalendar</span>
+</button>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-6 w-full"></div>
+</div>
+
+<script>
+  // Pilih butang menggunakan ID
+  const butang1 = document.getElementById('butangTabBaharu');
+
+  
+  // Tambah fungsi apabila butang diklik
+  butang1.addEventListener('click', function() {
+    window.location.href = '1.html';
+  });  
+</script>
+
+</body>
+</html>

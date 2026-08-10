@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Complaints and Inquiries - Permai Court 1</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-white dark:bg-slate-900 p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<button onclick="history.back()" class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex-1 px-2 text-center">
+<h2 class="text-lg font-bold leading-tight tracking-tight">Report &amp; Inquiry</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400">Permai Court 1 Ampang</p>
+</div>
+<button class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- New Report Form -->
+<div class="p-4 space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">edit_document</span>
+<h3 class="text-lg font-bold leading-tight">Submit a New Report</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+<label class="flex flex-col gap-2">
+<p class="text-sm font-semibold">Category</p>
+<div class="relative">
+<select class="form-select w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12 px-4 appearance-none">
+<option disabled="" selected="" value="">Select category (e.g., Lift, Leakage)</option>
+<option value="lift">Lift Maintenance</option>
+<option value="leakage">Water Leakage</option>
+<option value="security">Security Issue</option>
+<option value="cleanliness">Cleanliness</option>
+<option value="others">Others</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-slate-400">unfold_more</span>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<p class="text-sm font-semibold">Message</p>
+<textarea class="form-textarea w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary min-h-[120px] p-3 text-sm" placeholder="Describe your complaint or inquiry in detail..."></textarea>
+</label>
+<div class="flex flex-col gap-2">
+<p class="text-sm font-semibold">Upload Photo</p>
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg cursor-pointer bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-slate-400 mb-2">add_a_photo</span>
+<p class="text-xs text-slate-500 dark:text-slate-400">Tap to upload evidence</p>
+</div>
+<input class="hidden" type="file"/>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                        Submit Report
+                    </button>
+</div>
+</div>
+<!-- Complaint History (Sejarah Aduan) -->
+<div class="p-4 space-y-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+<h3 class="text-lg font-bold leading-tight">Sejarah Aduan</h3>
+</div>
+<button class="text-primary text-sm font-medium">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Item 1: Resolved -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-sm">Lift Block A - Stuck</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Report ID: #PC-8821 • 12 Oct 2023</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800">Resolved</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-1">The main lift in Block A is not responding to floor buttons...</p>
+</div>
+<!-- Item 2: In Progress -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-sm">Ceiling Leakage (Kitchen)</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Report ID: #PC-8945 • 20 Oct 2023</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 border border-amber-200 dark:border-amber-800">In Progress</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-1">Water dripping from unit above into my kitchen area...</p>
+</div>
+<!-- Item 3: Pending -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-sm">CCTV Inquiry - Parking</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Report ID: #PC-9012 • Just now</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Pending</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-1">Requesting to check CCTV footage near Pillar B4...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-20 border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-4 pb-6 pt-2">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">description</span>
+</div>
+<p class="text-[10px] font-medium leading-normal">Reports</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-[10px] font-medium leading-normal">Notice</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

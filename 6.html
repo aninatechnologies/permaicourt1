@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ms"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto min-h-screen max-w-[430px] bg-white dark:bg-slate-900 shadow-2xl flex flex-col">
+<!-- Header -->
+<div class="sticky top-0 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div class="flex items-center justify-between px-4 pt-12 pb-4">
+<div onclick="history.back()" class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-slate-100">Komunikasi</h1>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">more_horiz</span>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-slate-100 dark:border-slate-800 px-4">
+<button class="flex-1 border-b-2 border-primary py-3 text-sm font-bold text-primary">
+                    Sembang
+                </button>
+<button class="flex-1 border-b-2 border-transparent py-3 text-sm font-medium text-slate-500 dark:text-slate-400">
+                    Mesyuarat Video
+                </button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-4">
+<form action="7.html" method="GET">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">search</span>
+<input class="w-full rounded-xl border-none bg-slate-100 py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary dark:bg-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500" placeholder="Cari perbualan atau jiran" type="text"/>
+</div>
+</form>
+</div>
+<!-- Chat List Content -->
+<div class="flex-1 overflow-y-auto px-4 pb-24">
+<!-- Pinned Chat -->
+<div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+<span class="material-symbols-outlined text-xs">push_pin</span>
+                Disemat
+            </div>
+<div class="flex items-center gap-4 rounded-2xl bg-primary/5 p-3 mb-6">
+<div class="relative">
+<div class="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Official logo of housing management office" style="background-image: url('img/jmb1.webp')"></div>
+<div class="absolute bottom-0 right-0 h-4 w-4 rounded-full border-2 border-white bg-green-500 dark:border-slate-900"></div>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="flex items-center justify-between">
+<h3 class="truncate text-base font-bold text-slate-900 dark:text-slate-100">Pengurusan Permai Court 1</h3>
+<span class="text-[11px] font-medium text-primary">Baru</span>
+</div>
+<p class="truncate text-sm font-medium text-slate-600 dark:text-slate-300">Penyelenggaraan lif blok A akan bermula esok.</p>
+</div>
+</div>
+<!-- Recent Chats -->
+<div class="mb-4 text-[10px] font-bold uppercase tracking-wider text-slate-400">Sembang Terkini</div>
+<div class="space-y-6">
+<!-- Chat Item 1 -->
+<div class="flex items-center gap-4">
+<div class="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Portrait of a male neighbor living in the building" style="background-image: url('img/25.jpg')"></div>
+<div class="flex-1 border-b border-slate-50 pb-4 dark:border-slate-800/50">
+<div class="flex items-center justify-between">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Encik Ali (Blok B-4-2)</h3>
+<span class="text-xs text-slate-400">10:45 AM</span>
+</div>
+<p class="truncate text-sm text-slate-500 dark:text-slate-400">Terima kasih atas maklumat tersebut.</p>
+</div>
+</div>
+<!-- Chat Item 2 -->
+<div class="flex items-center gap-4">
+<div class="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Portrait of a female neighbor living in the building" style="background-image: url('img/8.png')"></div>
+<div class="flex-1 border-b border-slate-50 pb-4 dark:border-slate-800/50">
+<div class="flex items-center justify-between">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Puan Aminah (Blok A-10-5)</h3>
+<span class="text-xs text-slate-400">Semalam</span>
+</div>
+<p class="truncate text-sm text-slate-500 dark:text-slate-400">Boleh saya pinjam tangga lipat petang ni?</p>
+</div>
+</div>
+<!-- Chat Item 3 -->
+<div class="flex items-center gap-4">
+<div class="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Portrait of a young male professional" style="background-image: url('img/27.jpg')"></div>
+<div class="flex-1 border-b border-slate-50 pb-4 dark:border-slate-800/50">
+<div class="flex items-center justify-between">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Faiz (Blok C-1-1)</h3>
+<span class="text-xs text-slate-400">Khamis</span>
+</div>
+<p class="truncate text-sm text-slate-500 dark:text-slate-400">Jumpa di gelanggang badminton nanti.</p>
+</div>
+</div>
+</div>
+<!-- Video Meeting Section Preview -->
+<div class="mt-8 rounded-2xl bg-slate-900 p-5 text-white shadow-lg">
+<div class="flex items-start justify-between">
+<div>
+<span class="inline-flex items-center rounded-full bg-primary/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Akan Datang</span>
+<h4 class="mt-2 text-lg font-bold">Mesyuarat Agung Tahunan</h4>
+<div class="mt-1 flex items-center gap-2 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>25 Okt, 8:30 Malam</span>
+</div>
+</div>
+<div class="flex -space-x-2">
+<div class="h-8 w-8 rounded-full border-2 border-slate-900 bg-slate-500 bg-cover" data-alt="Participant 1 thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdB4jt_iltoOKZxC9kIQ7iOAlnZz_p1fKE5H--gi3gGKSlmGP0d_bpDJr8kZvbC6R_gDbJCN2YxTCY_Fiul4fc8YAQeaAxeGjn9q9hZRf6o5NtWnmt_QCZHRSWQFUv7nB-hQRErCfPrWGOTSDCaWfjFviEUt83SpluKUHKVpEOxWzD0apOu12Dwqlnjg9sMk5fYxaxrtKdWJUcQWzipV6B5kpCZZ5xiJ06XiK0Jw1dnIukF4-tTVPflUqyYSi8B2if95ZDkFuoPPo')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-slate-900 bg-slate-500 bg-cover" data-alt="Participant 2 thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD39mPdSQpO4YqJX5pRoNahE-hqmKEihiH9JYx4uNe7352EW0HcztdJvieLehoRqu_JHPEA6vBKirmcF8rUIxH323P_4hX92-oH81Mm8nv5VGqqj5JxLAPWj4hqtKP-alAkfg3DBafq73fapSfR708mxtMacoMlO2LfEaqIkcz3p4j1iqY00_si_SfMN_K97eKEiFo7IhTWNt40TP0d2IFnRIfPvO3TzOcRm97Hq0m7_2_o8z9moq6RY-m2xqO9GmuCKMbHoFii2Zo')"></div>
+<div class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-900 bg-slate-700 text-[10px] font-bold">+12</div>
+</div>
+</div>
+<button class="mt-5 w-full rounded-xl bg-primary py-3 text-sm font-bold text-white transition-opacity active:opacity-90">
+                    Sertai Mesyuarat
+                </button>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="absolute bottom-24 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-xl">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 z-30 w-full max-w-[430px] border-t border-slate-100 bg-white/90 px-4 pb-6 pt-2 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/90">
+<div class="flex justify-between">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="1.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Utama</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="7.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">chat_bubble</span>
+<span class="text-[10px] font-medium">Komunikasi</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="5.html">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-medium">Notifikasi</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="13.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

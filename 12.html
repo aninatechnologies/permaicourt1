@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran Berjaya - Permai Court 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400,500,600,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#137fec",
+                        success: "#22c55e",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+            font-size: 24px;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            animation: confetti-fall linear forwards;
+        }
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(400px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .success-check {
+            animation: pop-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes pop-in {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .fade-in-up {
+            animation: fade-in-up 0.8s ease forwards;
+            opacity: 0;
+        }
+        .fade-in-up:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .fade-in-up:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .fade-in-up:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        @keyframes fade-in-up {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="max-w-md mx-auto bg-white dark:bg-slate-900 min-h-screen flex flex-col shadow-xl relative overflow-hidden">
+
+        <!-- Confetti Animation -->
+        <div class="confetti-container" id="confettiContainer"></div>
+
+        <!-- Header -->
+        <header class="sticky top-0 z-10 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center p-4 justify-between">
+                <a href="2.html" class="p-2 -ml-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined align-middle">arrow_back</span>
+                </a>
+                <div class="text-center">
+                    <h1 class="text-lg font-bold leading-tight tracking-tight">Pembayaran Berjaya</h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Unit: B-05-12</p>
+                </div>
+                <button class="p-2 -mr-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined align-middle">help</span>
+                </button>
+            </div>
+            <!-- Progress step - complete -->
+            <div class="flex items-center justify-between px-6 pb-4">
+                <div class="flex items-center gap-2 text-xs font-medium text-success">
+                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                    <span>Semak</span>
+                </div>
+                <div class="h-0.5 flex-1 bg-success"></div>
+                <div class="flex items-center gap-2 text-xs font-medium text-success">
+                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                    <span>Bayar</span>
+                </div>
+                <div class="h-0.5 flex-1 bg-success"></div>
+                <div class="flex items-center gap-2 text-xs font-medium text-success">
+                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                    <span>Selesai</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="flex-1 overflow-y-auto pb-36">
+            <!-- Success Card -->
+            <div class="m-4 p-6 bg-success/10 dark:bg-success/20 rounded-2xl border border-success/30 text-center">
+                <div class="success-check inline-flex items-center justify-center size-24 bg-success/20 dark:bg-success/30 rounded-full mb-4">
+                    <span class="material-symbols-outlined text-6xl text-success filled">check_circle</span>
+                </div>
+                <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">Pembayaran Berjaya!</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Terima kasih, pembayaran anda telah diproses.</p>
+            </div>
+
+            <!-- Receipt / Details -->
+            <section class="px-4 py-2">
+                <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                    <div class="p-4 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                        <h3 class="font-bold text-sm">Resit Pembayaran</h3>
+                        <span class="text-[10px] font-medium text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded-full">#INV-2023-001</span>
+                    </div>
+                    
+                    <div class="fade-in-up p-4 space-y-4">
+                        <!-- Date -->
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-500 dark:text-slate-400">Tarikh</span>
+                            <span class="font-medium">30 Okt 2023, 02:45 PM</span>
+                        </div>
+                        <!-- Method -->
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-500 dark:text-slate-400">Kaedah Bayaran</span>
+                            <span class="font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">credit_card</span>
+                                Visa •••• 3456
+                            </span>
+                        </div>
+                        <!-- Status -->
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-500 dark:text-slate-400">Status</span>
+                            <span class="font-medium text-success flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                                Berjaya
+                            </span>
+                        </div>
+                        <!-- Reference -->
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-500 dark:text-slate-400">Rujukan</span>
+                            <span class="font-mono text-xs font-medium">PAY-231030-001</span>
+                        </div>
+                    </div>
+
+                    <!-- Bill Items Summary -->
+                    <div class="fade-in-up p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-700 space-y-3">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600 dark:text-slate-400">Yuran Penyelenggaraan (Okt)</span>
+                            <span class="font-medium">RM 120.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600 dark:text-slate-400">Bil Air (Okt)</span>
+                            <span class="font-medium">RM 45.50</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600 dark:text-slate-400">Sinking Fund (Okt)</span>
+                            <span class="font-medium">RM 80.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="fade-in-up p-4 bg-primary/5 dark:bg-primary/10 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                        <span class="font-bold text-base">Jumlah Dibayar</span>
+                        <span class="text-xl font-extrabold text-primary">RM 245.50</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="px-4 py-4">
+                <div class="space-y-3">
+				<a href="https://permaicourt1.gt.tc/permaicourt1.pdf" download="Resit-Pembayaran.pdf" class="w-full">
+                    <button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">download</span>
+                        Muat Turun Resit
+                    </button>
+				</a>
+					<!-- Tukar nombor telefon dan teks mesej mengikut keperluan anda -->
+					<a href="https://wa.me/" target="_blank" class="w-full">
+						<button class="w-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 py-4 rounded-xl font-bold text-base border-2 border-slate-200 dark:border-slate-700 active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+							<span class="material-symbols-outlined">share</span>
+							Kongsi Resit
+						</button>
+					</a>
+
+                    <a href="2.html" class="block w-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 py-4 rounded-xl font-bold text-base text-center active:scale-[0.98] transition-transform">
+                        Kembali ke Bil
+                    </a>
+                </div>
+            </section>
+
+            <!-- Quick Tip -->
+            <div class="px-4 pb-4">
+                <div class="flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+                    <span class="material-symbols-outlined text-blue-500">info</span>
+                    <p class="text-xs text-blue-700 dark:text-blue-300">
+                        Resit akan dihantar ke e-mel anda. Sila semak kotak masuk atau folder spam.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Bar (nav) -->
+        <div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
+            <div class="flex justify-around items-center">
+                <a href="1.html" class="flex flex-col items-center text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="text-[10px] font-bold mt-1">Utama</span>
+                </a>
+                <a href="2.html" class="flex flex-col items-center text-primary">
+                    <span class="material-symbols-outlined">receipt</span>
+                    <span class="text-[10px] font-bold mt-1">Bil</span>
+                </a>
+                <a href="5.html" class="flex flex-col items-center text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="text-[10px] font-bold mt-1">Notis</span>
+                </a>
+                <a href="13.html" class="flex flex-col items-center text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-[10px] font-bold mt-1">Profil</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Generate confetti particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#137fec', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
+            const shapes = ['square', 'circle'];
+
+            for (let i = 0; i < 60; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = 6 + Math.random() * 8;
+                const left = Math.random() * 100;
+                const duration = 1.5 + Math.random() * 2;
+                const delay = Math.random() * 1.5;
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+
+                confetti.style.cssText = `
+                            left: ${left}%;
+                            width: ${size}px;
+                            height: ${size}px;
+                            background: ${color};
+                            border-radius: ${shape === 'circle' ? '50%' : '2px'};
+                            animation-duration: ${duration}s;
+                            animation-delay: ${delay}s;
+                        `;
+
+                container.appendChild(confetti);
+            }
+
+            // Remove confetti after animation
+            setTimeout(() => {
+                container.innerHTML = '';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

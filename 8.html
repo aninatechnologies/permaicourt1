@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="ms"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-white dark:bg-background-dark overflow-x-hidden shadow-xl">
+<!-- Top Navigation -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<button onclick="history.back()" aria-label="Back" class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Pendaftaran Aktiviti</h2>
+</div>
+<!-- Event Image Header -->
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-slate-200 dark:bg-slate-800 @[480px]:rounded-xl min-h-64" data-alt="Community members participating in a cleaning activity outdoors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdrrfYkbsYL9X_wzfaiU-F7m_Dk0FROBqcppzOFCOMsCwAKVAQ7PtO1E36k3NFHYW9PN9MJP74Fqo1JoE2W8Ci0loELAn5aj49fUT1OK1mmmWboaMHPcHerB8oQNhOpl6GJh80T6XODESXS2PyeSuvCMewVo-h9g6T5LgVAS2epJ9eFb-8f8n0WelAvclBd1wY6Gcmc886qNrmwdUDXo16tOEMVK1BXgt_3_6-m-syYM9XjJFj2GK5c8rLHv5w1uFuMWhEaGwE6yw");'>
+</div>
+</div>
+</div>
+<!-- Event Details Section -->
+<div class="px-4 pt-6">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-extrabold leading-tight tracking-tight mb-2">Gotong-Royong Perdana</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                Mari sertai kami membersihkan kawasan kejiranan Permai Court 1 untuk persekitaran yang lebih selesa dan harmoni.
+            </p>
+<div class="space-y-0.5 border-t border-slate-100 dark:border-slate-800">
+<div class="grid grid-cols-[30%_1fr] py-4 items-center border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<p class="text-xs font-semibold uppercase tracking-wider">Tarikh</p>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium">Ahad, 25 Okt 2023</p>
+</div>
+<div class="grid grid-cols-[30%_1fr] py-4 items-center border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<p class="text-xs font-semibold uppercase tracking-wider">Masa</p>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium">8:00 AM - 12:00 PM</p>
+</div>
+<div class="grid grid-cols-[30%_1fr] py-4 items-center border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<p class="text-xs font-semibold uppercase tracking-wider">Lokasi</p>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium" data-location="Permai Court 1 Ampang">Dataran Permai</p>
+</div>
+</div>
+</div>
+<!-- Registration Form -->
+<div class="p-4 space-y-5">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold pt-2">Maklumat Peserta</h3>
+<div class="space-y-4">
+<label class="block">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium mb-1.5 block">Nama Penuh</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary p-3.5 text-sm" placeholder="Contoh: Ahmad Bin Ibrahim" type="text"/>
+</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="block">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium mb-1.5 block">No. Unit</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary p-3.5 text-sm" placeholder="B-03-05" type="text"/>
+</label>
+<label class="block">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium mb-1.5 block">Bilangan Peserta</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary p-3.5 text-sm" min="1" placeholder="1" type="number"/>
+</label>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 flex items-start gap-3 border border-primary/10">
+<div class="flex items-center h-5">
+<input class="h-5 w-5 rounded border-primary/30 text-primary focus:ring-primary bg-white dark:bg-slate-800" id="volunteer" type="checkbox"/>
+</div>
+<div class="text-sm">
+<label class="font-bold text-slate-900 dark:text-slate-100" for="volunteer">Daftar sebagai Sukarelawan</label>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Kami memerlukan bantuan untuk agihan makanan dan peralatan.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Button -->
+<div class="p-4 mt-auto pb-8">
+<form action="9.html" method="GET">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+</form>
+<span>Daftar Sekarang</span>
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</button>
+<p class="text-center text-slate-400 dark:text-slate-500 text-xs mt-4">
+                Pendaftaran ini tertakluk kepada Terma &amp; Syarat Permai Court 1.
+            </p>
+</div>
+</div>
+</body></html>

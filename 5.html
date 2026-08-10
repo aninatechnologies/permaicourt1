@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="ms"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Permai Court 1 - Hub Komuniti</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-tight tracking-tight uppercase">Permai Court 1</h2>
+<p class="text-xs text-slate-500 font-medium">Hub Komuniti</p>
+</div>
+<div class="flex size-10 items-center justify-end">
+<button class="relative flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 size-10 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+</header>
+<!-- Breaking News Slider -->
+<section class="mt-4 px-4">
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Berita Terkini</h2>
+<span class="text-primary text-sm font-semibold">Lihat Semua</span>
+</div>
+<div class="@container">
+<div class="relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[16/9]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern apartment complex with maintenance crew working outside" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%), url('img/flat.webp');"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-5">
+<span class="inline-flex mb-2 px-2 py-1 rounded bg-red-600 text-[10px] font-bold text-white uppercase w-fit tracking-wider">Kecemasan</span>
+<h3 class="text-white text-lg font-bold leading-snug">Gangguan Bekalan Air Berjadual: 24-25 Okt</h3>
+<p class="text-white/80 text-xs mt-1">Sila simpan bekalan air secukupnya untuk 2 hari.</p>
+<div class="flex justify-center gap-1.5 mt-4">
+<div class="h-1 w-6 rounded-full bg-white"></div>
+<div class="h-1 w-1.5 rounded-full bg-white opacity-40"></div>
+<div class="h-1 w-1.5 rounded-full bg-white opacity-40"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Filters -->
+<section class="mt-6 px-4">
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="whitespace-nowrap rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white">Semua</button>
+<button class="whitespace-nowrap rounded-full bg-white dark:bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Program</button>
+<button class="whitespace-nowrap rounded-full bg-white dark:bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Persatuan</button>
+<button class="whitespace-nowrap rounded-full bg-white dark:bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Sukan</button>
+</div>
+</section>
+<!-- Community Programs Feed -->
+<section class="mt-4 px-4 space-y-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Program Komuniti</h2>
+<!-- Program Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-48 w-full bg-slate-200 dark:bg-slate-800">
+<img alt="Gotong-royong activity" class="h-full w-full object-cover" data-alt="Community members participating in a clean-up activity" src="img/gr.png"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2.5 py-1 rounded-lg flex flex-col items-center">
+<span class="text-[10px] font-bold text-primary uppercase">Okt</span>
+<span class="text-lg font-black text-slate-900 dark:text-white leading-none">28</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-2 mb-2 text-xs font-medium text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Dataran Permai, Blok A</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-base font-bold mb-1">Gotong-Royong Perdana 2023</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Sertai kami untuk membersihkan kawasan sekitar demi kesejahteraan bersama. Sarapan disediakan!</p>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300"></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-400"></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-500"></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-primary flex items-center justify-center text-[8px] font-bold text-white">+12</div>
+</div>
+<form action="8.html" method="GET">
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-colors">Daftar Sekarang</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Program Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-48 w-full bg-slate-200 dark:bg-slate-800">
+<img alt="Badminton tournament" class="h-full w-full object-cover" data-alt="Residents playing badminton in a sports hall" src="img/b3.png"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2.5 py-1 rounded-lg flex flex-col items-center">
+<span class="text-[10px] font-bold text-primary uppercase">Nov</span>
+<span class="text-lg font-black text-slate-900 dark:text-white leading-none">05</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-2 mb-2 text-xs font-medium text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Dewan Serbaguna Ampang</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-base font-bold mb-1">Kejohanan Badminton Terbuka</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Peluang untuk menonjolkan bakat anda! Kategori terbuka untuk semua peringkat umur penduduk.</p>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300"></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-400"></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-primary flex items-center justify-center text-[8px] font-bold text-white">+8</div>
+</div>
+<form action="8.html" method="GET">
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-colors">Daftar Sekarang</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Program Card 3 (Small Feed Style) -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex gap-4">
+<div class="size-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Flea Market" class="h-full w-full object-cover" data-alt="People browsing a local community market" src="img/4.png"/>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 text-sm font-bold">Pasar Karat Komuniti</h4>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] mt-1">Sertai gerai jualan barang terpakai dan makanan pada 12 Nov.</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="text-primary text-[11px] font-bold">Percuma</span>
+<button class="text-primary text-[11px] font-bold underline">Butiran</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-[60] flex border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-background-dark/95 backdrop-blur-lg px-2 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="1.html">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<p class="text-[10px] font-medium leading-none">Utama</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-1">grid_view</span>
+<p class="text-[10px] font-bold leading-none">Hub</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center -mt-6" href="3.html">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</div>
+<p class="text-[10px] font-medium leading-none mt-1 text-slate-400">Aduan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="4.html">
+<span class="material-symbols-outlined text-[24px]">chat_bubble</span>
+<p class="text-[10px] font-medium leading-none">Mesej</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="13.html">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<p class="text-[10px] font-medium leading-none">Profil</p>
+</a>
+</nav>
+</div>
+</body>
+</html>
